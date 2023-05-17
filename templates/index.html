@@ -1,5 +1,32 @@
 {%extends "base.html" %}
 
 {% block content %}
-<h1>Hello World!</h1>
+<div class="content-container">
+  <div class="search-bar-wrap">
+    <input
+    type="text"
+    name="search"
+    hx-post="/search"
+    hx-trigger="keyup changed delay:250ms"
+    hx-indicator=".htmx-loading-status"
+    hx-target="#todo-results"
+    placeholder="Search"
+    class="search-bar"
+    >
+    <span class="htmx-loading-status">Searching...</span>
+  </div>
+
+  <table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+  </thead>
+  <tbody id="todo-results">
+    {% include 'todo.html' %}
+  </tbody>
+</table>
+</div>
 {% endblock content %}
