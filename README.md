@@ -14,17 +14,16 @@ A simple search bar that searchs a hardcoded list of todo items based on [this](
     - CSS to style the table and search bar in a similar fashion to the tutorial example but without using tailwind.
     
 ## Installing:
-   ### Make a local clone of the repo
-    - $ git clone 
-   ### Install Python if required
+   ### 1. Fork and clone the repo
+   ### 2. Install Python if required
     - $ npm i python3
-   ### Install and run virtual environment
+   ### 3. Install and run virtual environment
     - $ npm i virtualenv
     - $ python3 -m venv venv
     - $ source <path to venv>/Scripts/activate    # if using windows
         OR
     - $ source <path to venv>/bin/activate    # if using POSIX
-   ### Instal Flask if not already installed:
+   ### 4. Instal Flask if not already installed:
     - (venv)$ pip install Flask==2.1.1 Flask-Assets==2.0
-   ### Run the app and view in localHost:5000
+   ### 5. Run the app and view in localhost:5000
     - $ python app.py
